@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PHP Starter Application</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="style.css" />
+  <title>PHP-Uploader</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+  <script src="/javascripts/bootstrap.min.js"></script>
 </head>
 <body>
-	<table>
-		<tr>
-			<td style='width: 30%;'><img class = 'newappIcon' src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<h1 id = "message"><?php echo "Hello world!"; ?>
-</h1>
-				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>. Get started by reading our <a
-				href="https://www.ng.bluemix.net/docs/#runtimes/php/index.html">documentation</a>
-				or use the Start Coding guide under your app in your dashboard.
-			</td>
-		</tr>
-	</table>
+	<div>
+		<!-- used code directly from http://php.net/manual/en/features.file-upload.post-method.php -->
+		<!-- The data encoding type, enctype, MUST be specified as below -->
+		<form enctype="multipart/form-data" action="upload.php" method="POST">
+		    <!-- MAX_FILE_SIZE must precede the file input field -->
+		    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+		    <!-- Name of input element determines name in $_FILES array -->
+		    Send this file: <input name="userfile" type="file" />
+		    <input type="submit" value="Send File" />
+		</form>
+	</div>
 </body>
 </html>
