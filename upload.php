@@ -25,6 +25,9 @@ $openstack = new OpenStack\OpenStack([
 			    ]
 			]);
 
+//creates the container if it does not already exist
+$openstack->objectStoreV1()->createContainer(['name' => 'php-uploader']);
+
 $container = $openstack->objectStoreV1()
                        ->getContainer('php-uploader');
 
@@ -38,9 +41,8 @@ $options = [
 
 echo "uploading " . $options['name'];
 
-
 $container->createObject($options);
 
 //found on http://stackoverflow.com/questions/14810399/php-form-redirect
-header( 'Location: https://php-uploader.mybluemix.net' ) ;
+header( 'Location: /' ) ;
 ?>

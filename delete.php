@@ -33,4 +33,4 @@ foreach ($container->listObjects() as $object) {
 }
 
 //found on http://stackoverflow.com/questions/14810399/php-form-redirect
-header( 'Location: https://php-uploader.mybluemix.net' ) ;
+header( 'Location: /' ) ;
