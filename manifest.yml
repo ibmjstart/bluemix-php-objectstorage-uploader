@@ -1,3 +1,9 @@
+---
+declared-services:
+  Uploader_Object-Storage:
+    label: Object-Storage
+    plan: Free
+
 applications:
 - path: .
   memory: 128M
@@ -7,3 +13,5 @@ applications:
   host: php-uploader
   disk_quota: 1024M
   buildpack: php_buildpack
+  services:
+    - Uploader_Object-Storage
