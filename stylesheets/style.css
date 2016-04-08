@@ -2,15 +2,24 @@
  * This file provides css styles.
  */
 
-body,html{
-  	background-color: #3b4b54; width : 100%;
+body {
+	padding: 50px;
 	height: 100%;
-	margin: 0 auto;
+	width: 100%;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #ffffff;
 }
 
 a {
   color: #00B7FF;
+}
+
+h2 {
+	color: #00B7FF;
+	text-align: center;
+}
+
+li {
+	text-align: center;
 }
 

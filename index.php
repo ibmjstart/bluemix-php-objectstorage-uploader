@@ -9,16 +9,63 @@
   <script src="/javascripts/bootstrap.min.js"></script>
 </head>
 <body>
-	<div>
-		<!-- used code directly from http://php.net/manual/en/features.file-upload.post-method.php -->
-		<!-- The data encoding type, enctype, MUST be specified as below -->
-		<form enctype="multipart/form-data" action="upload.php" method="POST">
-		    <!-- MAX_FILE_SIZE must precede the file input field -->
-		    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-		    <!-- Name of input element determines name in $_FILES array -->
-		    Send this file: <input name="userfile" type="file" />
-		    <input type="submit" value="Send File" />
-		</form>
-	</div>
+	<div class="container">
+	    <div class="hero-unit">
+	      <div class="pull-right">    
+	        <a href="/delete.php" class="btn btn-danger" title="Clear All">Delete All</a>
+	      </div>
+	      <div class="text-center">
+	        <h1><a href="/">PHP Upload</a></h1>
+	        <p>
+				<form action="/upload.php" method="POST" enctype="multipart/form-data">
+	            	<input type="file" name="file" /><br>
+	            	<input type="submit" class="btn" value="Upload">
+	          	</form>
+	        </p>
+	        <p>*Upload only .txt files please :)</p>
+	      </div>
+	    </div>
+	    <div class="hero-unit">
+	      	<?php
+		      	require 'vendor/autoload.php';
+		      	
+				//code modified from https://github.com/ibmjstart/wp-bluemix-objectstorage/blob/master/classes/swift.php
+				$vcap = getenv("VCAP_SERVICES");
+				$data = json_decode($vcap, true);
+				$creds = $data['Object-Storage']['0']['credentials'];
+				$auth_url = $creds['auth_url'] . '/v3'; //keystone v3
+				$region = $creds['region'];
+				$userId = $creds['userId'];
+				$password = $creds['password'];
+				$projectId = $creds['projectId'];
+				$openstack = new OpenStack\OpenStack([
+							    'authUrl' => $auth_url,
+							    'region'  => $region,
+							    'user'    => [
+							        'id'       => $userId,
+							        'password' => $password
+							    ],
+							    'scope'   => [
+							    	'project' => [
+							    		'id' => $projectId
+							    	]
+							    ]
+							]);
+				
+				$container = $openstack->objectStoreV1()
+				                       ->getContainer('php-uploader');
+				                       
+				echo "<h2>Files in php-uploader</h2>";
+				
+				echo "<ul class=\"unstyled\">";
+				foreach ($container->listObjects() as $object) {
+					echo "<li>";
+				    echo $object->name;
+					echo "</li>";
+				}
+				echo "</ul>";
+	      ?>
+      </div>
+    </div>
 </body>
 </html>
