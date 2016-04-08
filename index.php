@@ -22,7 +22,6 @@
 	            	<input type="submit" class="btn" value="Upload">
 	          	</form>
 	        </p>
-	        <p>*Upload only .txt files please :)</p>
 	      </div>
 	    </div>
 	    <div class="hero-unit">
