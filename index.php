@@ -1,4 +1,4 @@
-<?php
+<!--
 /*-------------------------------------------------------------------*/
 /*                                                                   */
 /* Copyright IBM Corp. 2016 All Rights Reserved                      */
@@ -41,7 +41,7 @@
 /* intended to state or imply that IBM's licensed program must be    */
 /* used. Any functionally equivalent program may be used.            */
 /*-------------------------------------------------------------------*/
-?>
+-->
 <!DOCTYPE html>
 <html>
 <head>
