@@ -99,7 +99,7 @@
 				$container = $openstack->objectStoreV1()
 				                       ->getContainer('php-uploader');
 				                       
-				echo "<h2>Files in OpenStack Swift</h2>";
+				echo "<h2>Files in Object Storage</h2>";
 				
 				echo "<ul class=\"unstyled\">";
 				foreach ($container->listObjects() as $object) {
