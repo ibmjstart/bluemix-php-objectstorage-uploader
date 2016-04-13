@@ -42,6 +42,7 @@
 /* used. Any functionally equivalent program may be used.            */
 /*-------------------------------------------------------------------*/
 -->
+<!-- Most of the html is directly from https://github.com/ibmjstart/bluemix-node-mysql-uploader -->
 <!DOCTYPE html>
 <html>
 <head>
