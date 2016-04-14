@@ -17,6 +17,7 @@ You can manually push the app using the [Cloudfoundy CLI](https://github.com/clo
 1. Clone the repo  
 	```
 	git clone https://github.com/ibmjstart/bluemix-php-objectstorage-uploader
+
 	cd bluemix-php-objectstorage-uploader
 	```
 2. Modify "host" in [manifest.yml](manifest.yml)
