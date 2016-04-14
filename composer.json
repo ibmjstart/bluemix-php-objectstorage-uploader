@@ -1,6 +1,6 @@
 {
     "require": {
-        "php-opencloud/openstack": "v2.0.0-rc2",
+        "php-opencloud/openstack": "v2.0.2",
         "guzzlehttp/guzzle": "6.2.0"
     }
 }

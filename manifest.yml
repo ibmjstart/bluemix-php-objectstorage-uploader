@@ -12,6 +12,6 @@ applications:
   name: php-uploader
   host: php-uploader
   disk_quota: 1024M
-  buildpack: php_buildpack
+  buildpack: https://github.com/cloudfoundry/php-buildpack
   services:
     - Uploader_Object-Storage
