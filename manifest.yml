@@ -10,7 +10,6 @@ applications:
   instances: 1
   domain: mybluemix.net
   name: php-uploader
-  host: php-uploader
   disk_quota: 1024M
   buildpack: https://github.com/cloudfoundry/php-buildpack
   services:
