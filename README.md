@@ -8,7 +8,8 @@ We highly recommend using the Deploy to Bluemix button for any users unfamiliar 
 
 ### Option 1:
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-php-objectstorage-uploader)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-php-objectstorage-uploader.git)
+
 
 ### Option 2:
 
