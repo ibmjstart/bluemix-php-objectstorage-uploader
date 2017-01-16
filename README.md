@@ -63,4 +63,10 @@ In the terminal, go to the directory of your app and follow these steps:
 
 > If you need help setting up the Cloudfoundry CLI please refer to the [Bluemix docs](https://console.ng.bluemix.net/docs/starters/install_cli.html)  
 
+Your app should look like this once deployed:
+
+![image](images/phpappscreen.png)
+
+You can upload files to store in Object Storage as demonstrated above.
+
 This sample is provided under the [MIT license](License.txt)
